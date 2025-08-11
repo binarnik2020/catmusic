@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Трек инфо */
+.track-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.track-info img {
+  width: 45px;
+  height: 45px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Видео */
+video {
+  max-width: 80vw;
+  max-height: 55vh;
+  border-radius: 15px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+/* Ползунок */
+#seek-bar {
+  width: 70%;
+  margin: 12px auto;
+  display: block;
+  -webkit-appearance: none;
+  background: #444;
+  height: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ff4081;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Кнопки */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.controls dotlottie-wc {
+  transition: transform 0.25s ease, filter 0.25s ease;
+  cursor: pointer;
+}
+
+.controls dotlottie-wc:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px #ff4081);
+}
+
+/* Анимация появления */
+.fade-in {
+  animation: fadeInAll 1s ease forwards;
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease forwards;
+}
+.slide-up:nth-child(1) { animation-delay: 0.2s; }
+.slide-up:nth-child(2) { animation-delay: 0.4s; }
+.slide-up:nth-child(3) { animation-delay: 0.6s; }
+.slide-up:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes fadeInAll {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

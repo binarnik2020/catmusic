@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CatMusic<3</title>
+
+  <!-- Подключаем шрифт Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+</head>
+<body>
+  <div class="container fade-in">
+
+    <!-- Информация о треке -->
+    <div class="track-info slide-up">
+      <img id="track-gif" src="assets/media/plast.gif" alt="gif" class="hidden">
+      <span id="track-title">Трек не выбран</span>
+    </div>
+
+    <!-- Видео -->
+    <video id="cat-video" autoplay muted loop playsinline class="slide-up">
+      <source src="assets/media/cat.mp4" type="video/mp4">
+    </video>
+
+    <!-- Ползунок -->
+    <input type="range" id="seek-bar" min="0" max="100" value="0" class="slide-up">
+
+    <!-- Кнопки -->
+    <div class="controls slide-up">
+      <dotlottie-wc id="prev-btn"
+        src="https://lottie.host/030c6bd1-9344-4cb2-b9d4-375773022c96/nrtVmecqHt.lottie"
+        style="width: 90px; height: 90px" autoplay loop>
+      </dotlottie-wc>
+
+      <dotlottie-wc id="pause-btn"
+        src="https://lottie.host/a902f2a7-2d1c-4431-9d8f-ccafd2b93ee7/T3eEt0pjgr.lottie"
+        style="width: 90px; height: 90px" autoplay loop>
+      </dotlottie-wc>
+
+      <dotlottie-wc id="next-btn"
+        src="https://lottie.host/4cb1521f-c102-4838-8041-b1ca23a8b92a/oTMCsyT7kw.lottie"
+        style="width: 90px; height: 90px" autoplay loop>
+      </dotlottie-wc>
+    </div>
+    
+
+  </div>
+
+  <audio id="audio-player"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
